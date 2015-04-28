@@ -10,4 +10,6 @@ James Cheng, Yiping Ke, Ada Fu, Jeffrey Yu, and Linhong Zhu. Finding Maximal Cli
 
 James Cheng, Yiping Ke, Ada Fu, Jeffrey Xu Yu, Linhong Zhu: Finding Maximal Cliques in Massive Networks by H* Graph. ACM SIGMOD 2010: 447-458 [pdf]
 
-For more details, please read the paper the Readme_TODS.pdf
+For more details, please read the paper and the Readme_TODS.pdf within MCE_TODS
+
+
