@@ -15,13 +15,15 @@ James Cheng, Yiping Ke, Ada Fu, Jeffrey Yu, and Linhong Zhu. Finding Maximal Cli
 For more details, please read the paper and the Readme_TODS.pdf within MCE_TODS
 
 Requirements:
+
 a. All your node ids should be integers ranging from 0 to MAX-1, MAX is total number of nodes.
+
 b. Input should be in the format as shown below. 
 
 
 ###Sample-files: 
 
-There is sample-input in [here]( )
+There is sample-input 
 ```
 Input:
 
