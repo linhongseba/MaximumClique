@@ -14,7 +14,7 @@ James Cheng, Yiping Ke, Ada Fu, Jeffrey Yu, and Linhong Zhu. Finding Maximal Cli
 
 For more details, please read the paper and the Readme_TODS.pdf within MCE_TODS
 
-Requirements:
+###Requirements:
 
 a. All your node ids should be integers ranging from 0 to MAX-1, MAX is total number of nodes.
 
@@ -53,6 +53,42 @@ This lists all the cliques found in the input graph.
 4	1
 ```
 In every line first number is clique size and second number is total cliques found. For example, there is one clique of size 2 and size 3 etc..
+
+
+### Utilities:
+For this algorithm, node ids should be integers. Most of use-cases might have string ids. So I want to describe an example how to convert your string ids to integers using a hashtable.
+
+#### 1. Converting strings to integer ids
+Say, your input file is in [this](https://github.com/linhongseba/MaximumClique/blob/master/sample-files/str-input.txt) format
+```
+s_id1 s_id2
+s_id3 s_id4
+```
+
+You can use the [str_to_int.py](https://github.com/linhongseba/MaximumClique/blob/master/util/str_to_int.py) script here to convert your string ids to integers. It uses a hashtable for that purpose. As you can see it will output hashtable to a file
+
+Now you have ids
+```
+MAX_NODES
+int_id1 int_id2
+int_id3 int_id4
+```
+Output will look like [int-input.txt](https://github.com/linhongseba/MaximumClique/blob/master/sample-files/int-input.txt)
+####Usage for str_to_int.py
+```
+python str_to_int.py str-input int-input
+```
+This will create a file int-input with integer ids and 2 more files with hashtable and inverse hashtable mapping.
+
+
+Now, you have the integer ids, you can run the [edge2standard.cpp](https://github.com/linhongseba/MaximumClique/blob/master/util/edge2standard.cpp) program to get the format required for the algorithm.
+
+Yay, you are done. You problem is solved and you can use the [MCE_TODS.cpp](https://github.com/linhongseba/MaximumClique/blob/master/MCE_TODS/MCE_TODS.cpp) for the next step. 
+
+
+
+
+
 
 
 
