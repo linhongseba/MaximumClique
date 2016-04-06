@@ -15,17 +15,17 @@ We provide a practical implementation of maximum clique enumeration algorithm fo
 
 - [Walk-through Examples](#Examples)
 
-### ReadMe
+## ReadMe
 The detailed ReadMe File is lodated [here](https://github.com/linhongseba/MaximumClique/blob/master/MCE_TODS/Readme_TODS.pdf)
 
-### Publication
+## Publication
 
 James Cheng, Yiping Ke, Ada Fu, Jeffrey Xu Yu, Linhong Zhu: Finding Maximal Cliques in Massive Networks by H* Graph. ACM SIGMOD 2010: 447-458 [pdf](http://www.isi.edu/~linhong/Papers/sigmod10.pdf)
 
 
 James Cheng, Yiping Ke, Ada Fu, Jeffrey Yu, and Linhong Zhu. Finding Maximal Cliques in Massive Networks. ACM Transactions on Database Systems, Volume 36, Number 4, Pages 21:1-21:34, 2011. (TODS 2011) [Special issue on the best papers of SIGMOD 2010] [pdf](http://www.isi.edu/~linhong/Papers/TODS11.pdf).
 
-### Sample files
+## Sample files
 
 There is sample-input 
 ```
@@ -59,7 +59,7 @@ This lists all the cliques found in the input graph.
 In every line first number is clique size and second number is total cliques found. For example, there is one clique of size 2 and size 3 etc..
 
 
-### Examples
+## Examples
 For this algorithm, node ids should be integers. Most of use-cases might have string ids. So I want to describe an example how to convert your string ids to integers using a hashtable.
 
 #### 1. Converting strings to integer ids
@@ -78,6 +78,7 @@ int_id1 int_id2
 int_id3 int_id4
 ```
 Output will look like [int-input.txt](https://github.com/linhongseba/MaximumClique/blob/master/sample-files/int-input.txt)
+
 ####Usage for str_to_int.py
 ```
 python str_to_int.py str-input int-input
