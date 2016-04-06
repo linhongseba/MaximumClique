@@ -20,7 +20,7 @@ The detailed ReadMe File is lodated [here](https://github.com/linhongseba/Maximu
 
 ### Publication
 
-James Cheng, Yiping Ke, Ada Fu, Jeffrey Xu Yu, Linhong Zhu: Finding Maximal Cliques in Massive Networks by H* Graph. ACM SIGMOD 2010: 447-458 [pdf](http://www.isi.edu/~linhong/Papers/SIGMOD10.pdf)
+James Cheng, Yiping Ke, Ada Fu, Jeffrey Xu Yu, Linhong Zhu: Finding Maximal Cliques in Massive Networks by H* Graph. ACM SIGMOD 2010: 447-458 [pdf](http://www.isi.edu/~linhong/Papers/sigmod10.pdf)
 
 
 James Cheng, Yiping Ke, Ada Fu, Jeffrey Yu, and Linhong Zhu. Finding Maximal Cliques in Massive Networks. ACM Transactions on Database Systems, Volume 36, Number 4, Pages 21:1-21:34, 2011. (TODS 2011) [Special issue on the best papers of SIGMOD 2010] [pdf](http://www.isi.edu/~linhong/Papers/TODS11.pdf).
