@@ -16,7 +16,7 @@ We provide a practical implementation of maximum clique enumeration algorithm fo
 - [Walk-through Examples](#examples)
 
 ## ReadMe
-The detailed ReadMe File is lodated [here](https://github.com/linhongseba/MaximumClique/blob/master/MCE_TODS/Readme_TODS.pdf)
+The detailed ReadMe File is located [here](https://github.com/linhongseba/MaximumClique/blob/master/MCE_TODS/Readme_TODS.pdf)
 
 ## Publication
 
