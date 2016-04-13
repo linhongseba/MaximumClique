@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Maximumclique by linhongseba</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Maximumclique</h1>
+      <h2 class="project-tagline">The implementation for maximum clique enumeration algorithm</h2>
+      <a href="https://github.com/linhongseba/MaximumClique" class="btn">View on GitHub</a>
+      <a href="https://github.com/linhongseba/MaximumClique/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/linhongseba/MaximumClique/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="maximumclique" class="anchor" href="#maximumclique" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MaximumClique</h1>
+
+<p>The implementation for maximum clique enumeration algorithm.</p>
+
+<p>We provide a practical implementation of maximum clique enumeration algorithm for massive networks.</p>
+
+<h2>
+<a id="table-of-content" class="anchor" href="#table-of-content" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Table of Content</h2>
+
+<ul>
+<li><p><a href="#readMe">ReadMe</a></p></li>
+<li><p><a href="#publication">Publication</a></p></li>
+<li><p><a href="#sample-files">Sample Files</a></p></li>
+<li><p><a href="#examples">Walk-through Examples</a></p></li>
+</ul>
+
+<h2>
+<a id="readme" class="anchor" href="#readme" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ReadMe</h2>
+
+<p>The detailed ReadMe File is located <a href="https://github.com/linhongseba/MaximumClique/blob/master/MCE_TODS/Readme_TODS.pdf">here</a></p>
+
+<h2>
+<a id="publication" class="anchor" href="#publication" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Publication</h2>
+
+<p>James Cheng, Yiping Ke, Ada Fu, Jeffrey Xu Yu, Linhong Zhu: Finding Maximal Cliques in Massive Networks by H* Graph. ACM SIGMOD 2010: 447-458 <a href="http://www.isi.edu/%7Elinhong/Papers/sigmod10.pdf">pdf</a></p>
+
+<p>James Cheng, Yiping Ke, Ada Fu, Jeffrey Yu, and Linhong Zhu. Finding Maximal Cliques in Massive Networks. ACM Transactions on Database Systems, Volume 36, Number 4, Pages 21:1-21:34, 2011. (TODS 2011) [Special issue on the best papers of SIGMOD 2010] <a href="http://www.isi.edu/%7Elinhong/Papers/TODS11.pdf">pdf</a>.</p>
+
+<h2>
+<a id="sample-files" class="anchor" href="#sample-files" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sample files</h2>
+
+<p>There is sample-input </p>
+
+<pre><code>Input:
+
+12
+0,4:1:2:4:5
+1,2:0:2
+2,5:0:1:3:4:5
+4,4:0:2:3:5
+3,2:2:4
+5,3:0:2:4
+10,1:11
+11,1:10
+</code></pre>
+
+<p>Output : Output has 2 files</p>
+
+<pre><code>1) Cliques
+0 2 1 
+0 2 5 4 
+10 11 
+
+This lists all the cliques found in the input graph.
+
+2) Clique Statistics
+1   0
+2   1
+3   1
+4   1
+</code></pre>
+
+<p>In every line first number is clique size and second number is total cliques found. For example, there is one clique of size 2 and size 3 etc..</p>
+
+<h2>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h2>
+
+<p>For this algorithm, node ids should be integers. Most of use-cases might have string ids. So I want to describe an example how to convert your string ids to integers using a hashtable.</p>
+
+<h4>
+<a id="1-converting-strings-to-integer-ids" class="anchor" href="#1-converting-strings-to-integer-ids" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Converting strings to integer ids</h4>
+
+<p>Say, your input file is in <a href="https://github.com/linhongseba/MaximumClique/blob/master/sample-files/str-input.txt">this</a> format</p>
+
+<pre><code>s_id1 s_id2
+s_id3 s_id4
+</code></pre>
+
+<p>You can use the <a href="https://github.com/linhongseba/MaximumClique/blob/master/util/str_to_int.py">str_to_int.py</a> script here to convert your string ids to integers. It uses a hashtable for that purpose. As you can see it will output hashtable to a file</p>
+
+<p>Now you have ids</p>
+
+<pre><code>MAX_NODES
+int_id1 int_id2
+int_id3 int_id4
+</code></pre>
+
+<p>Output will look like <a href="https://github.com/linhongseba/MaximumClique/blob/master/sample-files/int-input.txt">int-input.txt</a></p>
+
+<h4>
+<a id="usage-for-str_to_intpy" class="anchor" href="#usage-for-str_to_intpy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage for str_to_int.py</h4>
+
+<pre><code>python str_to_int.py str-input int-input
+</code></pre>
+
+<p>This will create a file int-input with integer ids and 2 more files with hashtable and inverse hashtable mapping.</p>
+
+<p>Now, you have the integer ids, you can run the <a href="https://github.com/linhongseba/MaximumClique/blob/master/util/edge2standard.cpp">edge2standard.cpp</a> program to get the format required for the algorithm.</p>
+
+<p>Yay, you are done. You problem is solved and you can use the <a href="https://github.com/linhongseba/MaximumClique/blob/master/MCE_TODS/MCE_TODS.cpp">MCE_TODS.cpp</a> for the next step based on the instructions in the ReadMe Files. </p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/linhongseba/MaximumClique">Maximumclique</a> is maintained by <a href="https://github.com/linhongseba">linhongseba</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
